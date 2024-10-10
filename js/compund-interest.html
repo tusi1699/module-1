@@ -1,0 +1,35 @@
+
+<!-- WAP to calculate compound interest -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Compound Interest</title>
+    </head>
+    <body>
+        <h2>Compound Interest</h2>
+        <input type="number" id="principal" placeholder="Enter principal amount"><br><br>
+        <input type="number" id="rate" placeholder="Enter interest rate"><br><br>
+        <input type="number" id="time" placeholder="Enter time in years"><br><br>
+        <button onclick="compound_interest()">Calculate Compound Interest</button>
+        <p id="result"></p>
+
+        <script>
+            function compound_interest(){
+                let principal=document.getElementById("principal").value;
+                let rate=document.getElementById("rate").value;
+                let time=document.getElementById("time").value;
+
+                let amount= principal;
+                for (let i=0;i<time;i++){
+                    amount*=(1+rate/100);
+                }
+                let result=amount-principal;
+
+                document.getElementById("result").innerHTML = `Compound interest is: ${result}`;
+            }
+        </script>
+    </body>
+</html>

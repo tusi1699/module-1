@@ -1,0 +1,28 @@
+
+<!-- WAP to find area of triangle -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Area of a Triangle</title>
+    </head>
+    <body>
+        <h3>Find Area of a Triangle</h3>
+        <input type="number" id="base" placeholder="Enter value for base"><br><br>
+        <input type="number" id="height" placeholder="Enter value for height"><br><br>
+        <button onclick="triangle()">Result</button>
+        <p id="result"></p>
+
+        <script>
+            function triangle(){
+                let base=document.getElementById("base").value;
+                let height=document.getElementById("height").value;
+
+                let result=0.5*base*height;
+                document.getElementById("result").innerHTML = `Area of triangle is: ${result}`;  
+            }
+        </script>
+    </body>
+</html>

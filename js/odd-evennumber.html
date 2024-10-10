@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd even number</title>
+</head>
+<body>
+    <h3>Find Odd/Even Number</h3>
+    <input type="number" id="input-number" placeholder="Enter a number">
+    <button onclick="disply()">Result</button>
+    <p id="Result"></p>
+
+    <script>
+        function disply()
+        {
+            let num=document.getElementById("input-number").value;                 
+            if(num%2==0){
+                Result="even";
+            }
+            
+             else{
+                Result="odd";
+             }
+            document.getElementById("Result").innerHTML = `This is an : ${Result} number.`;
+            
+
+        }
+
+    </script>
+
+
+</body>
+</html>

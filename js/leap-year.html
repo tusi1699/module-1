@@ -1,0 +1,31 @@
+
+<!-- WAP to find whether given year is a leap year or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leap year</title>
+    </head>
+    <body>
+        <h2>Find Leap year</h2>
+        <input type="number" id="input_num" placeholder="Enter year">
+        <button onclick="leap_year()">Result</button>
+        <p id="result"></p>
+
+        <script>
+            function leap_year(){
+                let num=document.getElementById("input_num").value;
+
+                if(num%2==0){
+                    result="leap year.";
+                }
+                else{
+                    result="not a leap year.";
+                }
+                document.getElementById("result").innerHTML = `This is a ${result}`;  
+            }
+        </script>
+    </body>
+</html>
